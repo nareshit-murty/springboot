@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1 th:text="${header}"></h1>
+<p> Languages: 
+<ul th:each="str : ${languages}">
+  <li th:text="${str}"></li>
+</ul>
+<a href="happy">Student Registration</a>
+<p />
+<table border="1">
+	<tr th:each="st : ${students}">
+		<td th:text="${st.id}"></td>
+		<td th:text="${st.name}"></td>
+		<td th:text="${st.qualification}"></td>
+		<td th:text="${st.city}"></td>
+	</tr>
+</table>
+</body>
+</html>

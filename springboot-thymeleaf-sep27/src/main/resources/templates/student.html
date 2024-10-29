@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Student Registration</h1>
+<form th:action="@{/saveStudent}" th:object="${student}">
+<table border="1">
+	<tr>
+		<td>ID</td>
+		<td><input type="number" th:field="*{id}" /></td>
+	</tr>
+	 <tr>
+		<td>NAME</td>
+		<td><input th:field="*{name}" /></td>
+	</tr>
+	<tr>
+		<td>QUALIFICATION</td>
+		<td><input th:field="*{qualification}" /></td>
+	</tr>
+	<tr>
+		<td>CITY</td>
+		<td><input th:field="*{city}" /></td>
+	</tr>
+		<tr>
+		<td align="center" colspan="2"><input type="submit" /></td>
+	</tr>
+</table>
+</form>
+</body>
+</html>
